@@ -19,7 +19,7 @@ $ chmod +x download_data.sh
 ```
 to make the script executable. Lastly, execute the shell script by running
 ```
-./download_data.sh
+$ ./download_data.sh
 ```
 You will be prompted for your kaggle username and password. We have hard-coded the competition name into the script for you, but if you ever want to use this script for another challenge you just need to copy whatever comes after https://www.kaggle.com/c/ in the url to the competition page. 
 
