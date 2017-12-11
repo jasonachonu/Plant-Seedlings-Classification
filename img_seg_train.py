@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import cv2
 import numpy as np
 from keras.preprocessing import image
-from img_preprocessing import create_mask, segment
+from img_preprocessing import preprocess_image
 
 # set the paths for root project folder, base training data folder, and test data folder
 PATH = "/Users/michaelarango/Desktop/ml2-proj"
@@ -32,6 +32,6 @@ for label in labels:
 
 for pic in pic_list:
     img = cv2.imread(pic)
-    img = segment(img)
+    img = preprocess_image(img)
     SUB_PATH = pic.split('/')[-2] + '/' + pic.split('/')[-1]
     cv2.imwrite(os.path.join(TARGET_PATH, SUB_PATH), img)
