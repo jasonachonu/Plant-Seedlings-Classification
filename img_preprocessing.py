@@ -6,9 +6,11 @@ def preprocess_image(img):
     """
     A function to convert the colour image into the segmented image for better feature extraction.
     """
-
+    
+    #Convert the Image from RGB to BGR
+    image_bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
     # Convert the Image from BGR to HSV
-    image_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    image_hsv = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2HSV)
 
     sensitivity = 35
     lower_hsv = np.array([60 - sensitivity, 100, 50])
