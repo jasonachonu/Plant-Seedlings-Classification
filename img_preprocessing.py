@@ -1,3 +1,7 @@
+import numpy as np
+import cv2
+
+
 def preprocess_image(img):
     """
     A function to convert the colour image into the segmented image for better feature extraction.
