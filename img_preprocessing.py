@@ -15,7 +15,6 @@ def preprocess_image(img):
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (11, 11))
     # Remove noise from the image
     mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
-    mask = create_mask(img)
     # Use mask to create a Segmented Image
     output = cv2.bitwise_and(img, img, mask=mask)
     return output
