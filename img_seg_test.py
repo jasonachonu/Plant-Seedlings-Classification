@@ -1,8 +1,6 @@
 # import required packages
 import os
-import matplotlib.pyplot as plt
 import cv2
-import numpy as np
 from keras.preprocessing import image
 from img_preprocessing import preprocess_image
 
