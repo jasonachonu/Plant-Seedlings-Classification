@@ -80,4 +80,5 @@ def create_training_set(size, use_modified=True):
 X, targets = create_training_set(size=INPUT_SIZE, use_modified=False)
 X_mod, targets2 = create_training_set(size=INPUT_SIZE, use_modified=True)
 np.save(file='X', arr=X)
+np.save(file='X_mod', arr=X_mod)
 np.save(file='targets', arr=targets)
