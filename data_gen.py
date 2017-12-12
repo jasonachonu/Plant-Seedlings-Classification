@@ -82,5 +82,5 @@ X_mod, targets2 = create_training_set(size=INPUT_SIZE, use_modified=True)
 if not os.path.exists('serialized'):
     os.mkdir('serialized')
 np.save(file=os.path.join('serialized', 'X_{}'.format(INPUT_SIZE)), arr=X)
-np.save(file=os.path.join('serialized', 'X_mod'.format(INPUT_SIZE)), arr=X_mod)
-np.save(file=os.path.join('serialized', 'targets'.format(INPUT_SIZE)), arr=targets)
+np.save(file=os.path.join('serialized', 'X_mod_{}'.format(INPUT_SIZE)), arr=X_mod)
+np.save(file=os.path.join('serialized', 'targets'), arr=targets)
