@@ -27,3 +27,13 @@ This script will make a new directory `kaggle/` and download all the files from 
 
 2. Preprocessing the Data
 
+Run the preprocessing scripts
+
+3. Data Generator Script
+
+Run the Generator script and change the `INPUT_SIZE` to the desired size
+
+4. Modeling
+
+Run the modeling scripts.
+
