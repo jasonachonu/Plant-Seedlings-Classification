@@ -5,7 +5,7 @@ from keras.preprocessing import image
 from img_preprocessing import preprocess_image
 
 # set the paths for root project folder, base training data folder, and test data folder
-PATH = "/Users/michaelarango/Desktop/ml2-proj"
+PATH = "/home/mike/kaggle"
 TRAINING_FOLDER = os.path.join(PATH, "train")
 TEST_IMAGES = os.path.join(PATH, "test")
 
