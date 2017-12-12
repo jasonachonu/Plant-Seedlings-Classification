@@ -15,8 +15,13 @@ TRAINING_FOLDER = os.path.join(PATH, "train")
 TRAIN_MOD = os.path.join(PATH, "train_mod")
 TEST_IMAGES = os.path.join(PATH, "test")
 TEST_MOD = os.path.join(PATH, "test_mod")
+INPUT_SIZE = 50
+USE_MOD = False
 
-X = np.load('X.npy')
+if USE_MOD:
+    X = np.load('X_mod_{}.npy'.format(INPUT_SIZE))
+else:
+    X = np.load('X_{}.npy'.format(INPUT_SIZE))
 targets = np.load('targets.npy')
 
 # split into training and validation sets and stratify to preserve class imbalances
