@@ -19,10 +19,10 @@ INPUT_SIZE = 50
 USE_MOD = True
 
 if USE_MOD:
-    X = np.load('X_mod_{}.npy'.format(INPUT_SIZE))
+    X = np.load('serialized/X_mod_{}.npy'.format(INPUT_SIZE))
 else:
-    X = np.load('X_{}.npy'.format(INPUT_SIZE))
-targets = np.load('targets.npy')
+    X = np.load('serialized/X_{}.npy'.format(INPUT_SIZE))
+targets = np.load('serialized/targets.npy')
 
 # split into training and validation sets and stratify to preserve class imbalances
 X_train, X_val, y_train, y_val = train_test_split(X, targets, test_size=0.2, random_state=42, stratify=targets)
